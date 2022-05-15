@@ -1,0 +1,66 @@
+
+
+.cards_row {
+    display: flex;
+    margin-bottom: 2.5rem;
+    padding: 2%;
+  }
+  .card {
+    padding: 3%;
+    background: #FFFFFF;
+    border: 1px solid #F8F8F8;
+    box-shadow: 0px 14px 30px rgba(0, 0, 0, 0.05);
+    border-radius: 2.5rem;
+    position: relative;
+    margin-right: 8rem;
+    cursor: pointer;
+  }
+  .card:hover {
+    
+  }
+  .shop_like {
+    position: absolute;
+  }
+  .shuhe {
+    margin-top: 1rem;
+    margin-bottom: 0.9rem;
+  }
+  .card_text, .cart_marke {
+    font-size: 1rem;
+    line-height: 1.063rem;
+    text-align: center;
+  }
+  .card_price {
+    font-weight: 700;
+    font-size: 1rem;
+    line-height: 1.063rem;
+    color: #000000;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 0.8rem;
+  }
+  .shuhe_price {
+    font-weight: 500;
+    font-size: 0.688rem;
+    line-height: 0.813rem;
+    text-transform: uppercase;
+    color: #BDBDBD;
+    margin-top: 0.875rem;
+  }
+  .card_plus {
+    margin-top: 0.875rem;
+    width: 2rem;
+    height: 2rem;
+  }
+  .shuhe_price_text {
+    font-weight: 700;
+    font-size: 1rem;
+    line-height: 1.063rem;
+    margin-bottom: 0.2rem;
+  }
+  .shuhe_price_zahl {
+    font-weight: 700;
+    font-size: 1.2rem;
+    line-height: 1.063rem;
+    color: #000000
+  }

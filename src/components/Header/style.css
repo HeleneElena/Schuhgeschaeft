@@ -1,0 +1,33 @@
+.wrapper {
+    display: flex;
+    justify-content: space-between;
+  }
+  .logo {
+    margin-top: 2.813rem;
+    display: flex;
+  }
+  .logo_img {
+    margin-top: -3rem;
+    margin-right: 1.2rem;
+    margin-left: 1rem;
+  }
+  h3 {
+    font-weight: 700;
+    font-size: 1.25rem;
+    line-height: 1.5rem;
+    text-transform: uppercase;
+    margin-bottom: 3.438rem;
+  }
+  .data_user{
+    margin-top: 3.438rem;
+  }
+  .korb {
+    display: flex;
+  }
+  .korb_logo {
+    margin-right: 0.625rem;
+  }
+  .like {
+    margin-left: 2.5rem;
+    margin-right: 1.875rem;
+  }
