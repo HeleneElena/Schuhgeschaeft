@@ -9,7 +9,7 @@ function Suche(props) {
                     <h1>Alle Sneakers</h1>
                     <div className="input_search">
                         <img src="./image/search.svg" alt="search" className="search_img"/>
-                        <p className="search_text">Suchen</p>
+                        <p className="search_text"> Suchen </p>
                     </div>
                 </div>
             </div>

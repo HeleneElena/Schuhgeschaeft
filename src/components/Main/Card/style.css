@@ -1,11 +1,5 @@
 
-
-.cards_row {
-    display: flex;
-    margin-bottom: 2.5rem;
-    padding: 2%;
-  }
-  .card {
+.card {
     padding: 3%;
     background: #FFFFFF;
     border: 1px solid #F8F8F8;
@@ -14,9 +8,6 @@
     position: relative;
     margin-right: 8rem;
     cursor: pointer;
-  }
-  .card:hover {
-    
   }
   .shop_like {
     position: absolute;
