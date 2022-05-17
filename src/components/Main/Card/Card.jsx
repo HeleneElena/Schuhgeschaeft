@@ -2,8 +2,13 @@ import React from 'react';
 import './style.css';
 
 function Card(props) {
+    const [isAdd, setIsAdd] = React.useState(false);
+
+    const onClickPlus = () => {
+        setIsAdd(!isAdd)
+    }
+
     return (
-        <div className="cards_row"> 
             <div className="card">
             <div className="card_shuhe">
                 <img src="./image/shop_like.svg" alt="like" className="shop_like"/>
@@ -16,12 +21,12 @@ function Card(props) {
                             <p className="shuhe_price_text">Price</p>
                             <p className="shuhe_price_zahl">{props.price} €</p>
                         </div>
-                        <div className="card_plus">
-                            <img src="./image/shop_plus.svg" alt="plus" className="card_plus_img"/>
-                        </div>
+                        <button className="card_plus" onClick={onClickPlus} >
+                            <img src={isAdd ? "./image/shop_gekauft.svg" : "./image/plus.svg"} alt="plus" className="card_plus_img"/>
+                        </button>
                     </div>
             </div>
-        </div>
+      
             );
 }
 

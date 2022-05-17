@@ -1,0 +1,52 @@
+.korb {
+    width: 385px;
+    height: 1059px;
+    background: #FFFFFF;
+    box-shadow: -10px 4px 24px rgba(0, 0, 0, 0.1);
+}
+.korb_titel {
+    font-size: 24px;
+    line-height: 29px;
+    color: #000000;
+}
+.items {
+    display: flex;
+    justify-content: space-between;
+    padding: 2%;
+    margin-bottom: 3rem;
+    margin-top: 2rem;
+}
+.korb_img {
+    width: 4.375rem;
+    height: 4.375rem;
+}
+.korb_text {}
+.card_text, .cart_marke {
+    font-size: 1rem;
+    text-align: center;
+    margin-left: 1rem;
+    margin-right: 1rem;
+  }
+b {
+    margin-left: 1rem;
+    margin-right: 1rem;
+    font-size: 1.063rem; 
+}
+.insgesamt {}
+.gesamSumme {
+    font-weight: 600;
+    font-size: 1rem;
+    line-height: 1.188rem;
+    color: #000000;
+}
+.btn_bestellung {
+    width: 325px;
+    height: 55px;
+    background: #9DD558;
+    border-radius: 1.125rem;
+    color: #fff;
+    margin-top: 2rem;
+    font-weight: 600;
+    font-size: 1rem;
+    line-height: 1.188rem;
+}

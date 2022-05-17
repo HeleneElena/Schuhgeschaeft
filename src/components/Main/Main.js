@@ -27,55 +27,7 @@ function Main(props) {
             price: '139',
             count: 1,
         },
-        {
-            id: 4,
-            img: '/image/shuhe5.jpg',
-            marke: 'Nike Kyrie 7',
-            price: '149',
-            count: 1,
-        },
-        {
-            id: 5,
-            img: '/image/shuhe4.jpg',
-            marke: 'Jordan Air Jordan 11',
-            price: '99',
-            count: 1,
-        },
-        {
-            id: 6,
-            img: '/image/shuhe7.jpg',
-            marke: 'Under Armour Curry',
-            price: '199',
-            count: 1,
-        },
-        {
-            id: 7,
-            img: '/image/shuhe6.jpg',
-            marke: 'Nike Kyrie Flytrap IV',
-            price: '139',
-            count: 1,
-        },
-        {
-            id: 8,
-            img: '/image/shuhe10.jpg',
-            marke: 'Jordan Air Jordan 11',
-            price: '199',
-            count: 1,
-        },
-        {
-            id: 9,
-            img: '/image/shuhe8.jpg',
-            marke: 'Nike Lebron XVIII Low',
-            price: '149',
-            count: 1,
-        },
-        {
-            id: 10,
-            img: '/image/shuhe9.jpg',
-            marke: 'Nike LeBron XVIII',
-            price: '129',
-            count: 1,
-        },
+        
     ]
 
     return (
@@ -84,7 +36,7 @@ function Main(props) {
             <Suche />
             <section className="shop">
             <div className="container">
-                
+                <div className="cards_row"> 
                      {
                      data.map((el, key) =>  
                      (<Card
@@ -92,9 +44,10 @@ function Main(props) {
                         title={el.marke}
                         price={el.price}
                         img={el.img}
+                 
                         />))
                      }
-                
+                </div>
             </div>
         </section>
             
