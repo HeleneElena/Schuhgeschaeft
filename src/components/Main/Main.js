@@ -2,6 +2,7 @@ import Banner from './Banner/Banner';
 import Card from './Card/Card';
 import Suche from './Suche/Suche';
 import '../../App.css';
+import Korb from '../Korb/Korb';
 
 function Main(props) {
 
@@ -32,9 +33,11 @@ function Main(props) {
 
     return (
         <main>
-            <Banner />
+            <Korb />
+            { /* <Banner />
             <Suche />
-            <section className="shop">
+
+             <section className="shop">
             <div className="container">
                 <div className="cards_row"> 
                      {
@@ -49,7 +52,7 @@ function Main(props) {
                      }
                 </div>
             </div>
-        </section>
+            </section> */ }
             
             
         </main>
