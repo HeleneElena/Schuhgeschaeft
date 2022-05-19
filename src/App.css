@@ -13,10 +13,11 @@ body {
   padding-left: 0.938rem;
   padding-right: 0.938rem;
   margin: 0 auto;
+
 }
 .cards_row {
   display: flex;
-  justify-content: space-between;
+  flex-wrap: wrap;
   margin-bottom: 2.5rem;
   padding: 2%;
 }

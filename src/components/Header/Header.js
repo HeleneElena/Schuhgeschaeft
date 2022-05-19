@@ -12,7 +12,9 @@ function Header(props) {
                     </div>
                     <div className="data_user">
                         <div class="korb">
-                            <img src="./image/logoKorb.svg" alt="korb" class="korb_logo"/>
+                            <button onClick={props.onClickKorb} className='btn_svg_korb'>
+                                <img src="./image/logoKorb.svg" alt="korb" class="korb_logo"/> 
+                            </button>
                             <p className="logo_price">120 €</p>
                             <img src="./image/like.svg" alt="like" className="like"/>
                             <img src="./image/avatar.svg" alt="avatar" className="avatar"/>

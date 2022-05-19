@@ -1,60 +1,71 @@
+import React from 'react';
+
 import Banner from './Banner/Banner';
 import Card from './Card/Card';
 import Suche from './Suche/Suche';
+
 import '../../App.css';
-import Korb from '../Korb/Korb';
 
 function Main(props) {
-
-    const data = [
+    const items = [
         {
-            id: 1,
-            img: '/image/shuhe1.jpg',
-            marke: 'Nike Blazer Mid Suede',
-            price: '129',
-            count: 1,
+            "img": "/image/shuhe1.jpg",
+            "price": 152,
+            "marke": "Nike Blazer Mid Suede",
         },
         {
-            id: 2,
-            img: '/image/shuhe2.jpg',
-            marke: 'Nike Air Max 270',
-            price: '109',
-            count: 1,
+            "img": "/image/shuhe2.jpg",
+            "price": 91,
+            "marke": "Nike Air Max 270",
         },
         {
-            id: 3,
-            img: '/image/shuhe3.jpg',
-            marke: 'Under Armour Curry 8',
-            price: '139',
-            count: 1,
+            "img": "/image/shuhe3.jpg",
+            "price": 160,
+            "marke": "Under Armour Curry 8",
         },
-        
+        {
+            "img": "/image/shuhe4.jpg",
+            "price": 80,
+            "marke": "Nike Kyrie 7",
+        },
+        {
+            "img": "/image/shuhe5.jpg",
+            "price": 70,
+            "marke": "Nike Lebron XVIII Low",
+        },
+        {
+            "img": "/image/shuhe7.jpg",
+            "price": 63,
+            "marke": "Nike Blazer Mid Suede",
+        },
+        {
+            "img": "/image/shuhe8.jpg",
+            "price": 72,
+            "marke": "Nike Kyrie Flytrap IV",
+        }
     ]
 
     return (
         <main>
-            <Korb />
-            { /* <Banner />
+            <Banner />
             <Suche />
 
-             <section className="shop">
-            <div className="container">
-                <div className="cards_row"> 
-                     {
-                     data.map((el, key) =>  
-                     (<Card
-                        key={el.id}
-                        title={el.marke}
-                        price={el.price}
-                        img={el.img}
-                 
-                        />))
-                     }
+            <section className="shop">
+                <div className="container">
+                    <div className="cards_row">
+                        {
+                            items.map((el) =>
+                            (<Card
+                                title={el.marke}
+                                price={el.price}
+                                img={el.img}
+                            />))
+                        }
+                    </div>
                 </div>
-            </div>
-            </section> */ }
-            
-            
+            </section>
+
+
         </main>
     );
 }

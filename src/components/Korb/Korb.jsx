@@ -9,7 +9,10 @@ function Korb(props) {
             </div>
 
             <div className="korb_waren">
-                <h2 className="korb_title">Warenkorb</h2>
+                <div className='korb_header'>
+                    <h2 className="korb_title">Warenkorb</h2>
+                    <img onClick={props.onClose} src="./image/deletesvg.svg" alt="delete" className="deletesvg"/>
+                </div>
                 <div className="cart_waren">
                     <div className="img">
                         <img src="./image/shuhe6.jpg" alt="shuhe" className="img_corb_waren"/>
@@ -34,7 +37,7 @@ function Korb(props) {
                         <b className="corb_price_shuhe">89 €</b>
                     </div>
                     <div className="img_corb_svg">
-                        <img src="./image/deletesvg.svg" alt="delete" className="deletesvg"/>
+                        <img src="./image/deletesvg.svg" alt="delete" />
                     </div>
                 </div>
 
@@ -42,7 +45,7 @@ function Korb(props) {
                     <p className="gesamt">Insgesamt: <b>239</b> €</p>
                 </div>
                 <div className="btn">
-                    <button className="korb_btn">Bestellung aufgeben</button>
+                    <button className="korb_btn" >Bestellung aufgeben</button>
                 </div>
             </div>
         </section>
