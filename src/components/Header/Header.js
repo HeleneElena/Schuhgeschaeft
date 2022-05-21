@@ -11,9 +11,9 @@ function Header(props) {
                         <h3>SNEAKERS</h3>
                     </div>
                     <div className="data_user">
-                        <div class="korb">
+                        <div className="korb">
                             <button onClick={props.onClickKorb} className='btn_svg_korb'>
-                                <img src="./image/logoKorb.svg" alt="korb" class="korb_logo"/> 
+                                <img src="./image/logoKorb.svg" alt="korb" className="korb_logo"/> 
                             </button>
                             <p className="logo_price">120 €</p>
                             <img src="./image/like.svg" alt="like" className="like"/>

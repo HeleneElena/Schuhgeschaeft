@@ -1,13 +1,15 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 
 import Header from './components/Header/Header';
-import Main from './components/Main/Main';
+import Card from './components/Main/Card/Card';
+import Korb from './components/Korb/Korb';
+import Suche from './components/Main/Suche/Suche';
+import Banner from './components/Main/Banner/Banner';
 
 import './App.css';
-import Korb from './components/Korb/Korb';
 
 function App() {
-  const items = [
+    const items = [
     {
         "img": "/image/shuhe1.jpg",
         "price": 152,
@@ -63,16 +65,50 @@ function App() {
         "price": 80,
         "marke": "Nike Kyrie 7",
     }
-]
-  const [korbOpened, setKorbOpened] = React.useState(false);
-  const [corbItems, setCorbItems] = React.useState([ ]);
+    ]
+    const [corbItems, setCorbItems] = React.useState([]); // Array zum Aufbewahren von Waren im Warenkorb
+    const [korbOpened, setKorbOpened] = React.useState(false); // Warenkorb wird geöffnet
+    
+    const onAddToKorb = (obj) => {   
+        setCorbItems(prev => [...prev, obj]); // Ware hinzufügen in den Warenkorb
+    }
+    console.log(corbItems);
+  
+   {/* für meine Kontrol 
+     useEffect(() => {
+       console.log(corbItems);
+      }, [corbItems])
+    */ }
+
 
   return (
     <div className="App">
       
       <Header onClickKorb={() => setKorbOpened(true)} />
-      {korbOpened ?  <Korb onClose={() => setKorbOpened(false)} items={corbItems} /> : null}
-      {!korbOpened ?  <Main items={items} /> : null}
+      {korbOpened ?  <Korb onClose={() => setKorbOpened(false)} waren={corbItems} /> : null}
+      {!korbOpened ?  
+        <main>
+            <Banner />
+            <Suche />
+
+            <section className="shop">
+                <div className="container">
+                    <div className="cards_row">
+                        {
+                            items.map((el) =>
+                            (<Card
+                                title={el.marke}
+                                price={el.price}
+                                img={el.img}
+                                onPlus={(obj) => onAddToKorb(obj) }
+                                onFavor={() => {}}
+                            />))
+                        }
+                    </div>
+                </div>
+            </section>
+        </main>
+      : null}
       
     </div>
   );

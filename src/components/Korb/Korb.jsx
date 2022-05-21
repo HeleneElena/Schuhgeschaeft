@@ -1,7 +1,7 @@
 import React from 'react';
 import './style.css';
 
-function Korb({ onClose, items=[] }) {
+function Korb({ onClose, waren = [] }) {
     return (
         <section className='corb_korb'>
             <div className="korb_seite">
@@ -14,12 +14,11 @@ function Korb({ onClose, items=[] }) {
                     <img onClick={onClose} src="./image/deletesvg.svg" alt="delete" className="deletesvg" />
                 </div>
                 <div className="warenkorb">
-                    {
-                        items.map((obj) => {
-                            <div className="cart_waren">
-                                <div className="img">
-                                    <img src={obj.img} alt="shuhe" className="img_corb_waren"/>
-                                </div>
+                {
+                        waren.map((obj) => {
+                            return ( 
+                                <div className="cart_waren">
+                                <img src={obj.img} alt="schuhe" className='img_corb_waren' />
                                 <div className="corb_title_waren">
                                     <p className="corb_text">Männer Sneakers</p>
                                     <p className="corb_marke">{obj.marke}</p>
@@ -29,8 +28,10 @@ function Korb({ onClose, items=[] }) {
                                     <img src="./image/deletesvg.svg" alt="delete" className="deletesvg"/>
                                 </div>
                             </div>
+                            )
                         })
                     }
+                    
                 </div>
 
                 <div className="insgesamt">

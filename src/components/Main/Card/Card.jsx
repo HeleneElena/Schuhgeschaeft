@@ -1,13 +1,13 @@
 import React from 'react';
 import './style.css';
 
-function Card({title, img, price}) {
+function Card({title, img, price, onPlus, onFavor}) {
     const [isAdd, setIsAdd] = React.useState(false);
     const [favorite, setFavorite] = React.useState(false);
 
     const onClickPlus = () => {
-        setIsAdd(!isAdd)
         onPlus({title, img, price})
+        setIsAdd(!isAdd)
     }
     const onFavorite = () => {
         setFavorite(!favorite)
@@ -26,7 +26,7 @@ function Card({title, img, price}) {
                             <p className="shuhe_price_text">Price</p>
                             <p className="shuhe_price_zahl">{price} €</p>
                         </div>
-                        <button className="card_plus" onClick={onClickPlus} >
+                        <button className="card_plus" onClick={onClickPlus}  >
                             <img src={isAdd ? "./image/shop_gekauft.svg" : "./image/plus.svg"} alt="plus" className="card_plus_img"/>
                         </button>
                     </div>
