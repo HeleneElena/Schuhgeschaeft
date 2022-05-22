@@ -2,6 +2,7 @@ import React from 'react';
 import './style.css';
 
 function Korb({ onClose, waren = [] }) {
+
     return (
         <section className='corb_korb'>
             <div className="korb_seite">
@@ -30,8 +31,7 @@ function Korb({ onClose, waren = [] }) {
                             </div>
                             )
                         })
-                    }
-                    
+                 }    
                 </div>
 
                 <div className="insgesamt">

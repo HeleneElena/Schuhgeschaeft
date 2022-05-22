@@ -3,7 +3,6 @@ import React, {useEffect} from 'react';
 import Header from './components/Header/Header';
 import Card from './components/Main/Card/Card';
 import Korb from './components/Korb/Korb';
-import Suche from './components/Main/Suche/Suche';
 import Banner from './components/Main/Banner/Banner';
 
 import './App.css';
@@ -68,18 +67,22 @@ function App() {
     ]
     const [corbItems, setCorbItems] = React.useState([]); // Array zum Aufbewahren von Waren im Warenkorb
     const [korbOpened, setKorbOpened] = React.useState(false); // Warenkorb wird geöffnet
-    
+    const [searchValue, setSearchValue] = React.useState(''); // für input, für Suche
+
     const onAddToKorb = (obj) => {   
         setCorbItems(prev => [...prev, obj]); // Ware hinzufügen in den Warenkorb
     }
-    console.log(corbItems);
+
+    const onChangeSearchInput = (event) => {
+        setSearchValue(event.target.value);
+    }
+
   
    {/* für meine Kontrol 
      useEffect(() => {
        console.log(corbItems);
       }, [corbItems])
     */ }
-
 
   return (
     <div className="App">
@@ -89,14 +92,30 @@ function App() {
       {!korbOpened ?  
         <main>
             <Banner />
-            <Suche />
+            <section>
+            <div className="container">
+                <div className="search">
+                    <h1>
+                        {
+                            searchValue ? `Suche auf Anfrage: "${searchValue}" ` : 'Alle Sneakers'
+                        }
+                    </h1>
+                    <div className="input_search">
+                        <img src="./image/search.svg" alt="search" className="search_img"/>
+                        <input onChange={onChangeSearchInput} value={searchValue} className="search_text" placeholder='Suche' />
+                    </div>
+                </div>
+            </div>
+            </section>
 
             <section className="shop">
                 <div className="container">
                     <div className="cards_row">
                         {
-                            items.map((el) =>
+                            items.filter(item => item.marke.toLowerCase().includes(searchValue.toLowerCase()) )
+                                 .map((el, index) =>
                             (<Card
+                                key={index}
                                 title={el.marke}
                                 price={el.price}
                                 img={el.img}

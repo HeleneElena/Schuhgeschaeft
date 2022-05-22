@@ -7,7 +7,7 @@ function Card({title, img, price, onPlus, onFavor}) {
 
     const onClickPlus = () => {
         onPlus({title, img, price})
-        setIsAdd(!isAdd)
+        setIsAdd(!isAdd) // mein grüner Knopf oder Plus
     }
     const onFavorite = () => {
         setFavorite(!favorite)
